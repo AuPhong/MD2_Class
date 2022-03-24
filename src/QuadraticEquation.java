@@ -28,25 +28,40 @@ public class QuadraticEquation {
         return -b/(2*a);
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        double a,b,c;
-        System.out.println("Input a: ");
-        a = sc.nextDouble();
-        System.out.println("Input b: ");
-        b = sc.nextDouble();
-        System.out.println("Input c: ");
-        c = sc.nextDouble();
+    public void findRoot(){
 
-        QuadraticEquation equation = new QuadraticEquation(a,b,c);
-        if (equation.getDiscriminant()>0){
-            System.out.printf("Equation has 2 roots Root1:%f Root2:%f",equation.getRoot1(),equation.getRoot2());
+        if (this.getDiscriminant()>0){
+            System.out.printf("Equation has 2 roots Root1:%f Root2:%f",this.getRoot1(),this.getRoot2());
         }
-        else if(equation.getDiscriminant()==0){
-            System.out.println("Equation has 1 root: "+equation.getRoot());
+        else if(this.getDiscriminant()==0){
+            System.out.println("Equation has 1 root: "+this.getRoot());
         }
         else {
             System.out.println("Equation has no root.");
         }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double a,b,c;
+//        System.out.println("Input a: ");
+//        a = sc.nextDouble();
+//        System.out.println("Input b: ");
+//        b = sc.nextDouble();
+//        System.out.println("Input c: ");
+//        c = sc.nextDouble();
+
+        QuadraticEquation equation = new QuadraticEquation(1,2,3 );
+//        if (equation.getDiscriminant()>0){
+//            System.out.printf("Equation has 2 roots Root1:%f Root2:%f",equation.getRoot1(),equation.getRoot2());
+//        }
+//        else if(equation.getDiscriminant()==0){
+//            System.out.println("Equation has 1 root: "+equation.getRoot());
+//        }
+//        else {
+//            System.out.println("Equation has no root.");
+//        }
+
+        equation.findRoot();
     }
 }

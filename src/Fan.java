@@ -1,7 +1,7 @@
 public class Fan {
     private final int SLOW = 1;
-    private final int MEDIUM = 1;
-    private final int FAST = 1;
+    private final int MEDIUM = 2;
+    private final int FAST = 3;
     private boolean on = false;
     private double radius = 5;
     private int speed = SLOW;
