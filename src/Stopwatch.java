@@ -8,22 +8,6 @@ public class Stopwatch {
     public Stopwatch() {
     }
 
-    public long getStartTime() {
-        return startTime;
-    }
-
-    public void setStartTime(long startTime) {
-        this.startTime = startTime;
-    }
-
-    public long getStopTime() {
-        return stopTime;
-    }
-
-    public void setStopTime(long stopTime) {
-        this.stopTime = stopTime;
-    }
-
     public long start() {
         this.startTime = System.currentTimeMillis();
         return startTime;
@@ -45,7 +29,7 @@ public class Stopwatch {
         Scanner sc = new Scanner(System.in);
         int click=0;
         do {
-            System.out.println("Input 1 to start, 2 to calculate");
+            System.out.println("Input 1 to start, 2 to calculate, 3 to Exit");
             click = sc.nextInt();
             switch (click){
                 case 1:
@@ -54,8 +38,11 @@ public class Stopwatch {
                 case 2:
                     this.stop();
                     System.out.println(this.getElapsed());
+                    break;
+                case 3:
+                    System.exit(0);
             }
-        }while (click==1);
+        }while (1>0);
     }
 }
 
